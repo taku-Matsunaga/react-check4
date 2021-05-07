@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import BaseButton  from "./BaseButton"
 
 const Secondarybutton = (props) => {
-  const { children } = props;
+  const { children, onClick } = props;
 
   return (
     <>
-      <SButton>{children}</SButton>
+      <SButton onClick={onClick}>{children}</SButton>
     </>
   )
 }

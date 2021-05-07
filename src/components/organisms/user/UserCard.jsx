@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext, memo } from 'react'
 import styled from 'styled-components';
+import { UserContext } from '../../../provider/UserProvider';
 import Card from '../../atoms/card/Card';
 import Usericonwithname from '../../molecules/user/UserIconWithName';
 
 
-const Usercard = (props) => {
+const Usercard = memo((props) => {
   const { user } = props;
+  const context = useContext(UserContext);
+  console.log(context);
 
   return (
     <Card>
@@ -22,7 +25,7 @@ const Usercard = (props) => {
       </SDl>
     </Card>
   )
-}
+})
 
 const SDl = styled.dl`
 text-align: left;
